@@ -1,0 +1,66 @@
+.menuNav {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+}
+.menuNav li {
+  padding: 5px;
+  margin-right: 30px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.menuNav li:hover {
+  border-radius: 14px;
+}
+
+.categoryModal {
+  width: 900px;
+  height: 400px;
+  background-color: orange;
+  top: 126px;
+  left: calc(50vw - 450px);
+  position: absolute;
+  -webkit-animation: categoryModal 0.1s;
+          animation: categoryModal 0.1s;
+}
+
+.closeMenuNav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 900px;
+  color: white;
+  padding: 10px;
+}
+.closeMenuNav li {
+  padding: 5px;
+  margin-right: 30px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.closeMenuNav li:hover {
+  border-radius: 14px;
+}
+
+@-webkit-keyframes categoryModal {
+  from {
+    left: calc(50vw - 350px);
+    opacity: 0;
+  }
+  to {
+    left: calc(50vw - 450px);
+    opacity: 1;
+  }
+}
+
+@keyframes categoryModal {
+  from {
+    left: calc(50vw - 350px);
+    opacity: 0;
+  }
+  to {
+    left: calc(50vw - 450px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Menu.module.css.map */

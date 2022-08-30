@@ -1,0 +1,31 @@
+@use '../../../../global.scss';
+.container{
+    background-color: global.$primary_color;
+    .centralizar{
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        .titulo{
+            color:white;
+            display: inline-block;
+            &::after{
+                content: "°";
+            }
+            margin-left: 10px;
+        }        
+    }
+}
+
+
+.centralizarVertical{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+

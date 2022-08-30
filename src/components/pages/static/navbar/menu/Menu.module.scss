@@ -1,0 +1,54 @@
+.menuNav{
+    display: flex;
+    justify-content: center;
+    color:white;
+    padding:10px;
+    li{
+        padding:5px;
+        margin-right: 30px;
+        white-space: nowrap;
+        cursor:pointer;
+        &:hover{
+            border-radius: 14px;
+        }
+    }
+}
+
+.categoryModal{
+    width:900px;
+    height:400px;
+    background-color: orange;
+    top:126px; //Tamanho do topo. Importante! Alterar sempre q mexer no tamanho do topo, seja fonte, padding..
+    left:calc(100vw / 2 - 450px); //Centralizado
+    position: absolute;
+    animation: categoryModal 0.1s;
+}
+
+.closeMenuNav{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 900px;
+    color:white;
+    padding:10px;
+    li{
+        padding:5px;
+        margin-right: 30px;
+        white-space: nowrap;
+        cursor:pointer;
+        &:hover{
+            border-radius: 14px;
+        }
+    }
+}
+
+@keyframes categoryModal {
+    from{
+        left:calc(100vw / 2 - 350px);
+        opacity: 0;
+    }
+    to{
+        left:calc(100vw / 2 - 450px);
+        opacity: 1;
+    }
+}
