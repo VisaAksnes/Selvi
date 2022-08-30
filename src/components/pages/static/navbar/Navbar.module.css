@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.container {
+  background-color: rgba(44, 44, 250, 0.958);
+}
+.container .centralizar {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container .centralizar .titulo {
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+}
+.container .centralizar .titulo::after {
+  content: "°";
+}
+
+.centralizarVertical {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=Navbar.module.css.map */
