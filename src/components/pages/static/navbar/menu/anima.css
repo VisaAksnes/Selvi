@@ -1,0 +1,13 @@
+@keyframes encolhe_menu {
+    0%{
+        position:relative;
+    }
+    80%{
+        display: inline;
+        transform: scale(0,1);   
+    }
+    100%{
+      filter: blur(10px);
+    }
+    
+}
