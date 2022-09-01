@@ -1,0 +1,25 @@
+@use '../../../../../../../global.scss';
+
+.boxPeople{ //Cada quadradinho do container de pessoas. p.ex: masculino, feminino, neutro
+    width:25%;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    filter: grayscale(100%);
+    &:hover{
+        border:2px solid global.$primary_color;
+        border-radius: 5px;
+        filter: grayscale(0);
+    }
+        img{
+            width:80px;
+            height:80px;
+            border-radius: 200px;
+        }
+        p{
+            text-align: center;
+            width: 100%;
+        }
+}
