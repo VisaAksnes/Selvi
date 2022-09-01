@@ -2,7 +2,7 @@ import Styles from './Menu.module.css'
 import {useState} from 'react';
 import {FaAlignJustify} from 'react-icons/fa';
 import {AiOutlineCloseCircle} from 'react-icons/ai'
-import './anima.css';
+import Categorias from './ModalCategoria';
 export default function Menu({categoryModal,setCategoryModal}){
      
     return(
@@ -22,7 +22,7 @@ export default function Menu({categoryModal,setCategoryModal}){
             }
             {categoryModal&&
             <div className={Styles.categoryModal}>
-                sa
+                <Categorias/>
             </div>
             }
         </>

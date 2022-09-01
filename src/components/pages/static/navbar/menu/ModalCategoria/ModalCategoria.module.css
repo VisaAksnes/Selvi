@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+.containerBoxPeople {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 150px;
+}/*# sourceMappingURL=ModalCategoria.module.css.map */
