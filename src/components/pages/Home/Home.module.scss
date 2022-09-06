@@ -1,3 +1,24 @@
-*{
-    
+@use '../../../global.scss';
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:50px;
+}
+
+.exibicao{
+    text-align: center;
+}
+
+
+.produto{
+    cursor: pointer;
+    margin:30px 30px;
+    img{
+        max-width: 250px;
+    }
+    p{
+        max-width: 250px;
+        font-size: 0.7em;
+    }
 }

@@ -1,1 +1,9 @@
-*{}
+@use '../../../../../../../global.scss';
+.category{
+    li{
+        cursor:pointer;
+        &:hover{
+            color: global.$primary_color;
+        }
+    }
+}

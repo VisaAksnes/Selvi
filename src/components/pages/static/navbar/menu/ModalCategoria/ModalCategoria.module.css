@@ -7,4 +7,9 @@
   justify-content: flex-start;
   width: 100%;
   height: 150px;
+}
+
+.peopleSelectedTitle {
+  background-color: rgba(117, 181, 250, 0.499);
+  cursor: pointer;
 }/*# sourceMappingURL=ModalCategoria.module.css.map */

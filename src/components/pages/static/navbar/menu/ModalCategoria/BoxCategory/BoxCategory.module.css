@@ -1,1 +1,6 @@
-/*# sourceMappingURL=BoxCategory.module.css.map */
+.category li {
+  cursor: pointer;
+}
+.category li:hover {
+  color: rgba(44, 44, 250, 0.958);
+}/*# sourceMappingURL=BoxCategory.module.css.map */

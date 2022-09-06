@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"BoxCategory.module.css"}
+{"version":3,"sources":["BoxCategory.module.scss","BoxCategory.module.css","../../../../../../../global.scss"],"names":[],"mappings":"AAEI;EACI,eAAA;ACDR;ADEQ;EACI,+BELI;ADKhB","file":"BoxCategory.module.css"}
