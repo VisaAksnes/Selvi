@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {FaAlignJustify} from 'react-icons/fa';
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import Categorias from './ModalCategoria';
-export default function Menu({sexo, setSexo, funcGen, subcategoria, setSubCategoria}){
+export default function Menu({sexo, setSexo, subcategoria, setSubCategoria}){
     const [categoryModal, setCategoryModal] = useState(false); //Exibir "quadrado" do modal 
     return(
         <>
@@ -23,7 +23,7 @@ export default function Menu({sexo, setSexo, funcGen, subcategoria, setSubCatego
         
         {categoryModal===true&&
             <div className={Styles.categoryModal}>
-                <Categorias sexo={sexo} setSexo={setSexo} funcGen={funcGen} setCategoryModal={setCategoryModal} subcategoria={subcategoria} setSubCategoria={setSubCategoria}/>
+                <Categorias sexo={sexo} setSexo={setSexo} setCategoryModal={setCategoryModal} subcategoria={subcategoria} setSubCategoria={setSubCategoria}/>
             </div>
         }
         </>
