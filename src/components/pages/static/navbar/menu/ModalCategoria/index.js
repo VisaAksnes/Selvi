@@ -24,11 +24,23 @@ export default function ModalCategoria({sexo, setSexo, setCategoryModal, subcate
             <div className={Styles.containerCategory}>
                 <p className={Styles.peopleSelectedTitle}>{global.funcaoGenero(peopleSelected)} - Todos os itens</p>
                 { 
-                    <BoxCategory peopleSelected={peopleSelected} setSexo={setSexo} setCategoryModal={setCategoryModal} subcategoria={subcategoria} setSubCategoria={setSubCategoria} categoryData={categoryData.filter((item,index,array)=>{
-                        if(item.sexo===peopleSelected){
-                            return item;
-                        }
-                    })}/>  
+                    <BoxCategory 
+                        peopleSelected={peopleSelected} 
+                        setSexo={setSexo} 
+                        setCategoryModal={setCategoryModal} 
+                        subcategoria={subcategoria} 
+                        setSubCategoria={setSubCategoria} 
+                        categoryData={
+                            categoryData.filter((item,index,array)=>
+                            {
+                                if(item.sexo===peopleSelected){
+                                    return item; //true
+                                }
+                                else{
+                                    return false;
+                                }
+                            }
+                    )}/>  
                 }
             </div>
 

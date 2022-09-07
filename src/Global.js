@@ -1,7 +1,4 @@
 export default class Global{
-    constructor(){
-
-    }
     static funcaoGenero(sexo){
         switch(sexo){
             case '': return 'Todos';

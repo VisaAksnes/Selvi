@@ -1,15 +1,15 @@
 import Styles from './Home.module.css';
 import global from "../../../Global.js";
 
-export default function Home({produtos, setProdutos, sexo, setSexo}){
+export default function Home({calçados, setCalçados, sexo, setSexo}){
     return(
         <>
         <p className={Styles.exibicao}>Calçados &rarr; {global.funcaoGenero(sexo)}</p>
         <div className={Styles.container}>
-            {produtos&&
-                produtos.map((item)=>{
+            {calçados&&
+                calçados.map((item)=>{
                     return <div key={item['id']} className={Styles.produto}>
-                             <img src={item['img']}></img>
+                             <img src={item['img']} alt="Calçado"></img>
                              <p>{item['nome']} - {global.funcaoGenero(item['sexo'])}</p>
                            </div>
                 })

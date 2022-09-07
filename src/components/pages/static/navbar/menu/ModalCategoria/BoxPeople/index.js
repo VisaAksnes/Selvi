@@ -4,7 +4,7 @@ import global from "../../../../../../../Global.js";
 export default function BoxPeople({src, titulo, setPeopleSelected, sexo, setSexo, setCategoryModal, setSubCategoria}){ 
     
     function onClickPeople(){
-        if(titulo!='C'){
+        if(titulo!=='C'){
             setSexo(titulo);
             setCategoryModal(false);
             setSubCategoria('');
@@ -18,7 +18,7 @@ export default function BoxPeople({src, titulo, setPeopleSelected, sexo, setSexo
     }
     return(
         <div className={Styles.boxPeople} onClick={onClickPeople} onMouseOver={()=>setPeopleSelected(titulo)}>
-            <img src={src}/>
+            <img src={src} alt="Pessoa"/>
             <p>{global.funcaoGenero(titulo)}</p>
         </div>
     )
