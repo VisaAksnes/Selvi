@@ -1,4 +1,10 @@
-.container {
+.generalContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.generalContainer .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

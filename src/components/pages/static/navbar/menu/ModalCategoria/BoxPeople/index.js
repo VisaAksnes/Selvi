@@ -1,18 +1,15 @@
 import Styles from './BoxPeople.module.css';
 import global from "../../../../../../../Global.js";
 
-export default function BoxPeople({src, titulo, setPeopleSelected, sexo, setSexo, setCategoryModal, setSubCategoria}){ 
+export default function BoxPeople({add_filtro,setCalçados, setOffset, src, titulo, setPeopleSelected, setSexo, setCategoryModal, setSubCategoria}){ 
     
     function onClickPeople(){
         if(titulo!=='C'){
-            setSexo(titulo);
-            setCategoryModal(false);
-            setSubCategoria('');
+            add_filtro(titulo,'')
+            
         }
         else{ //C é para limpar tudo
-            setSexo('');
-            setSubCategoria('');
-            setCategoryModal(false);
+            add_filtro('','');
         }
         
     }
