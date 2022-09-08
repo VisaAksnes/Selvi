@@ -11,6 +11,24 @@
   padding: 50px;
 }
 
+.loadButton {
+  margin-bottom: 20px;
+  background-color: rgba(44, 44, 250, 0.958);
+  color: white;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.loadButton:hover {
+  transform: scale(1.1);
+  -webkit-animation: 1s all;
+          animation: 1s all;
+}
+
+.loadText {
+  margin-bottom: 20px;
+}
+
 .exibicao {
   text-align: center;
 }

@@ -1,7 +1,7 @@
 import Styles from './Home.module.css';
 import global from "../../../Global.js";
 
-export default function Home({calçados, sexo, subcategoria, setOffset,offset}){
+export default function Home({limiteLoad, calçados, sexo, subcategoria, setOffset,offset}){
     return(
         <>
         <p className={Styles.exibicao}>
@@ -19,7 +19,13 @@ export default function Home({calçados, sexo, subcategoria, setOffset,offset}){
                     })
                 }
             </div>
-            <button onClick={()=>setOffset(offset+3)}>Carregar mais produtos</button>
+            {
+                limiteLoad==true? 
+                     <p className={Styles.loadText}>Não há mais produtos disponíveis nessa categoria.</p>
+                :
+                     <button className={Styles.loadButton} onClick={()=>setOffset(offset+3)}>Carregar mais produtos</button>
+            }
+            
         </div>
         
         </>

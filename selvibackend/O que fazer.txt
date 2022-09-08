@@ -2,4 +2,4 @@ Este é o backend em php
 É uma API e, portanto, pode colocar somente o backend na pasta htdocs ou www.
 Use o xamp ou wamp e coloque estes arquivos no www(wamp) ou htdocs(xamp)
 De acordo com qual vc utilizar, terá que mudar o caminho na requisição http do front-end
-Em breve colocarei o banco de dados aqui também.
+Faça upload do banco de dados com o nome selvi, login root, senha em branco. Caso o login e a senha n sejam estas, não esqueça de mudar no backend!

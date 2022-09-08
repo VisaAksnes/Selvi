@@ -4,7 +4,7 @@ import Navbar from './components/pages/static/navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-function loadCalçados(sexo,subcategoria,setCalçados,calçados,offset,setOffset){
+function loadCalçados(sexo,subcategoria,setCalçados,calçados,offset,setOffset,setLimiteLoad){
   let url= "http://localhost/selvibackend/calcados.php?";
   if(sexo!=='')url=`${url}sexo=${sexo}&`;
   if(subcategoria!=='')url=`${url}subcategoria=${subcategoria}`;
@@ -21,6 +21,9 @@ function loadCalçados(sexo,subcategoria,setCalçados,calçados,offset,setOffset
   .then(resp => resp.json())
   .then(resp => {
     setCalçados(calçados.concat(resp));
+    if(resp.length==0) setLimiteLoad(true);
+      else setLimiteLoad(false);
+    
   });
 }
 
@@ -29,10 +32,10 @@ function App() {
   const [sexo, setSexo] = useState(''); //Filtro, P.Exp: M, F, N (neutro/unissex)
   const [subcategoria, setSubCategoria] = useState(''); //Filtro, P.exp: Botas, Chinelos, etc
   const [offset, setOffset] = useState(0); //Sistema de paginação. Offset {page} e LIMIT page+10
-
+  const [limiteLoad, setLimiteLoad] = useState(false);
 
   useEffect(()=>{ //Pegar calçados com filtro de sexo e subcategoria, load de categorias
-    loadCalçados(sexo,subcategoria,setCalçados, calçados,offset,setOffset);
+    loadCalçados(sexo,subcategoria,setCalçados, calçados,offset,setOffset, setLimiteLoad);
   },[sexo,subcategoria,offset])
 
  
@@ -42,7 +45,7 @@ function App() {
       <Router>
         <Navbar setCalçados={setCalçados} sexo={sexo} setOffset={setOffset} setSexo={setSexo} subcategoria={subcategoria} setSubCategoria={setSubCategoria}/>
         <Routes>
-          <Route path='/' element={<Home setOffset={setOffset} offset={offset} calçados={calçados} setCalçados={setCalçados} sexo={sexo} setSexo={setSexo} subcategoria={subcategoria}/>}/>
+          <Route path='/' element={<Home limiteLoad={limiteLoad} setOffset={setOffset} offset={offset} calçados={calçados} setCalçados={setCalçados} sexo={sexo} setSexo={setSexo} subcategoria={subcategoria}/>}/>
         </Routes>
       </Router>
     </div>
